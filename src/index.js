@@ -36,7 +36,7 @@ app.set("view engine", "hbs");
 // Passport session
 app.use(
   session({
-    secret: "keyboard cat",
+    secret: process.env.SECRET_COOKIE,
     resave: false,
     saveUninitialized: false,
     store: new pgSession({
