@@ -1,0 +1,28 @@
+<div class="container w-90 p-6">
+  <a href="/contact/add" class="btn btn-success my-2">Add</a>
+  <div class="row row-cols-3 row-cols-md-3 g-4">
+    {{#if contacts}}
+      {{#each contacts}}
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title m-1">{{this.name}}</h5>
+              <p class="card-text m-1">{{this.description}}</p>
+              <p class="card-text m-1">{{this.phone}}</p>
+              {{#if this.email}}
+                <p class="card-text m-1">{{this.email}}</p>
+              {{/if}}
+              <a
+                href="/contact/delete/{{this.id}}"
+                class="btn btn-danger m-1"
+              >Delete</a>
+              <a href="/contact/edit/{{this.id}}" class="btn btn-primary m-1">Edit</a>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <h2>Add contacts on your list...</h2>
+    {{/if}}
+  </div>
+</div>

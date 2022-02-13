@@ -1,0 +1,57 @@
+<div class="conteiner position-absolute start-50 mt-3 translate-middle-x">
+  <form
+    class="row g-3 m-1 bg-white p-2 border"
+    method="post"
+    action="/contact/edit/{{editContact.id}}"
+  >
+    <div class="col-12">
+      <h2>Edit contact</h2>
+      <input
+        value="{{editContact.name}}"
+        name="name"
+        type="text"
+        placeholder="Name"
+        class="form-control"
+        id="inputEmail4"
+        autofocus
+        required
+      />
+    </div>
+    <div class="col-12">
+      <div class="form-floating">
+        <input
+          value="{{editContact.description}}"
+          type="text"
+          class="form-control"
+          id="floatingInput"
+        />
+        <label for="floatingInput">Description</label>
+      </div>
+    </div>
+    <div class="col-12">
+      <input
+        value="{{editContact.phone}}"
+        name="phone"
+        type="tel"
+        placeholder="Phone"
+        class="form-control"
+        id="inputPassword4"
+        required
+      />
+    </div>
+    <div class="col-12">
+      <input
+        value="{{editContact.email}}"
+        name="email"
+        type="email"
+        placeholder="Email"
+        class="form-control"
+        id="inputPassword4"
+      />
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Edit</button>
+      <a href="/contact" class="btn btn-danger">Cancel</a>
+    </div>
+  </form>
+</div>
